@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sambalpuri Bazaar | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/Admin_page.css}" />
+</head>
+
+<body>
+
+<a class="back" href="/login">
+    <i class="fa-solid fa-arrow-left"></i> Back
+</a>
+
+<section class="dashboard">
+
+    <!-- ADMINS -->
+    <div class="card">
+        <h2>Admins</h2>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Number</th>
+                <th>Actions</th>
+            </tr>
+
+            <tr th:each="admin : ${admins}">
+                <td th:text="${admin.adminId}"></td>
+                <td th:text="${admin.adminName}"></td>
+                <td th:text="${admin.adminEmail}"></td>
+                <td th:text="${admin.adminNumber}"></td>
+                <td class="actions">
+                    <a th:href="@{'/updateAdmin/' + ${admin.adminId}}" class="edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <a th:href="@{'/deleteAdmin/' + ${admin.adminId}}" class="delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <a class="btn" th:href="@{/addAdmin}">➕ Add Admin</a>
+    </div>
+
+    <!-- USERS -->
+    <div class="card">
+        <h2>Users</h2>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Number</th>
+                <th>Actions</th>
+            </tr>
+
+            <tr th:each="user : ${users}">
+                <td th:text="${user.u_id}"></td>
+                <td th:text="${user.uname}"></td>
+                <td th:text="${user.uemail}"></td>
+                <td th:text="${user.unumber}"></td>
+                <td class="actions">
+                    <a th:href="@{'/updateUser/' + ${user.u_id}}" class="edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <a th:href="@{'/deleteUser/' + ${user.u_id}}" class="delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <a class="btn" th:href="@{/addUser}">➕ Add User</a>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="card">
+        <h2>Products</h2>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price (₹)</th>
+                <th>Actions</th>
+            </tr>
+
+            <tr th:each="product : ${products}">
+                <td th:text="${product.pid}"></td>
+                <td th:text="${product.pname}"></td>
+                <td th:text="${product.pprice}"></td>
+                <td class="actions">
+                    <a th:href="@{'/admin/product/edit/' + ${product.pid}}" class="edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <a th:href="@{'/admin/product/delete/' + ${product.pid}}" 
+                       class="delete"
+                       onclick="return confirm('Delete this product?')">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <a class="btn" th:href="@{/admin/product/add}">➕ Add Product</a>
+    </div>
+
+    <!-- ORDERS -->
+    <div class="card">
+        <h2>Orders</h2>
+
+        <table>
+            <tr>
+                <th>User</th>
+                <th>Email</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+                <th>Date</th>
+            </tr>
+
+            <tr th:each="order : ${orders}">
+                <td th:text="${order.user.uname}"></td>
+                <td th:text="${order.user.uemail}"></td>
+                <td th:text="${order.oName}"></td>
+                <td th:text="${order.oPrice}"></td>
+                <td th:text="${order.oQuantity}"></td>
+                <td th:text="${order.totalAmmout}"></td>
+                <td th:text="${order.orderDate}"></td>
+            </tr>
+        </table>
+    </div>
+
+</section>
+
+</body>
+</html>

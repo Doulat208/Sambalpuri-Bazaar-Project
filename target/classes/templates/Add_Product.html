@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add Product | Sambalpuri Bazaar</title>
+    <link rel="stylesheet" th:href="@{/css/add-product-light.css}"/>
+</head>
+
+<body>
+
+<a href="/admin/dashboard" class="back-link">← Back to Dashboard</a>
+
+<div class="addProducts">
+    <h2>Add New Product</h2>
+
+    <form th:action="@{/admin/product/save}"
+          th:object="${product}"
+          method="post"
+          enctype="multipart/form-data">
+
+        <label>Product Name</label>
+        <input type="text" th:field="*{pname}" placeholder="Eg: Sambalpuri Saree" required/>
+
+        <label>Price (₹)</label>
+        <input type="number" th:field="*{pprice}" placeholder="Eg: 2499" required/>
+
+        <label>Description</label>
+        <textarea th:field="*{pdescription}" rows="3"
+                  placeholder="Handwoven Sambalpuri traditional wear"></textarea>
+
+        <label>Product Image</label>
+        <input type="file" name="image" accept="image/*" required/>
+
+        <button type="submit">Add Product</button>
+    </form>
+</div>
+
+</body>
+</html>

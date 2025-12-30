@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register | Sambalpuri Bazaar</title>
+</head>
+<body>
+
+<h2>User Registration</h2>
+
+<form th:action="@{/register}" method="post" th:object="${user}">
+    Name: <input type="text" th:field="*{uname}" required><br><br>
+    Email: <input type="email" th:field="*{uemail}" required><br><br>
+    Password: <input type="password" th:field="*{upassword}" required><br><br>
+    Mobile: <input type="text" th:field="*{unumber}" required><br><br>
+
+    <small style="color:red" th:text="${error}"></small><br><br>
+
+    <button type="submit">Register</button>
+</form>
+
+<a th:href="@{/login}">Already have an account? Login</a>
+
+</body>
+</html>

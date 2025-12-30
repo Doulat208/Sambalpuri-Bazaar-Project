@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sambalpuri Bazaar | About</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/Navigation.css}" />
+    <link rel="stylesheet" th:href="@{/css/About.css}" />
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav th:replace="~{Navigation::navbar()}"></nav>
+
+<!-- About Section -->
+<section class="about-section">
+
+    <h1>About Sambalpuri Bazaar</h1>
+
+    <p class="about-text">
+        Sambalpuri Bazaar is a web-based e-commerce admin and product management system
+        designed to promote authentic Sambalpuri handloom products and traditional
+        Odia culture. The project focuses on efficient product management, user handling,
+        and a clean user interface using modern web technologies.
+    </p>
+
+    <div class="about-card">
+        <h2>Project Developed By</h2>
+
+        <ul>
+            <li><i class="fa-solid fa-user"></i> Doulat Biswal</li>
+            <li><i class="fa-solid fa-user"></i> Dolly Prajapati</li>
+            <li><i class="fa-solid fa-user"></i> Gargi Singh</li>
+        </ul>
+    </div>
+
+    <div class="college-card">
+        <h2>Institution</h2>
+        <p>KIET Group of Institutions</p>
+    </div>
+
+</section>
+
+</body>
+</html>

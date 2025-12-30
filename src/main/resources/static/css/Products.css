@@ -1,0 +1,90 @@
+body {
+    background: #f8f5f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Section */
+.product-section {
+    padding: 50px 30px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #7a1f1f;
+    margin-bottom: 40px;
+}
+
+/* Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Card */
+.product-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.image-box {
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.product-box img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-box:hover img {
+    transform: scale(1.08);
+}
+
+/* Text */
+.product-box h3 {
+    margin: 15px 0 6px;
+    color: #7a1f1f;
+    font-size: 20px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Button */
+.buy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 10px 26px;
+    background: linear-gradient(135deg, #7a1f1f, #a52a2a);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 15px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.buy-btn:hover {
+    background: linear-gradient(135deg, #a52a2a, #7a1f1f);
+    transform: scale(1.05);
+}

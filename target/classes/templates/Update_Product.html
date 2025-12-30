@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Update Product | Sambalpuri Bazaar</title>
+    <link rel="stylesheet" th:href="@{/css/Update_Product.css}"/>
+</head>
+
+<body>
+
+<a href="/admin/dashboard">← Back to Dashboard</a>
+
+<div class="updateProduct">
+    <h2>✏️ Update Product</h2>
+
+    <form th:action="@{'/admin/product/update/' + ${product.pid}}"
+          th:object="${product}" method="post">
+
+        <input type="hidden" th:field="*{pid}"/>
+
+        <label>Product Name</label>
+        <input type="text" th:field="*{pname}" required/>
+
+        <label>Price (₹)</label>
+        <input type="number" th:field="*{pprice}" required/>
+
+        <label>Description</label>
+        <textarea th:field="*{pdescription}" rows="3"></textarea>
+
+        <button type="submit">✅ Update Product</button>
+    </form>
+</div>
+
+</body>
+</html>

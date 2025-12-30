@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Sambalpuri Bazaar : Products</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" th:href="@{/css/Navigation.css}" />
+	<link rel="stylesheet" th:href="@{/css/Products.css}" />
+</head>
+
+<body>
+
+	<nav th:replace="~{Navigation::navbar()}"></nav>
+
+	<section class="product-section">
+		<h2 class="section-title">Our Products</h2>
+
+		<div class="product-grid">
+			<div class="product-box" th:each="s : ${products}">
+
+				<div class="image-box">
+					<img th:src="${s.imageName != null} 
+    ? @{/uploads/{img}(img=${s.imageName})} 
+    : @{/Images/final3.jpg}" alt="Product Image">
+				</div>
+
+				<h3 th:text="${s.pname}"></h3>
+				<p class="price">₹ <span th:text="${s.pprice}"></span></p>
+
+				<a href="/login" class="buy-btn">
+					<i class="fa-solid fa-cart-shopping"></i> Buy Now
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		document.querySelectorAll(".buy-btn").forEach(btn => {
+			btn.addEventListener("click", () => {
+				alert("Please login as a user to buy products.");
+			});
+		});
+	</script>
+
+</body>
+
+</html>

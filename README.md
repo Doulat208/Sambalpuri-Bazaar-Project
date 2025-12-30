@@ -1,117 +1,118 @@
-# Business Management Web Application : <br>
+# 🧵 Sambalpuri Bazaar – Business Management Web Application : <br>
 
-![home (2)](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/e8db8f17-72d6-42a0-b264-def0bf883bbf)
+![home](https://via.placeholder.com/900x400?text=Sambalpuri+Bazaar+Home)
 
+---
 
+## 📌 Project Desc : Sambalpuri Bazaar  
 
-## Project Desc : Business Management Web Application 
-  => The Business Management Web Application is a comprehensive tool designed to help businesses manage various aspects of their operations. 
-          It provides a user-friendly interface for tasks like managing customer data, inventory, orders, and more.
+=> Sambalpuri Bazaar is a Spring Boot based Business Management Web Application designed to manage Sambalpuri products, users, admins, and orders through an admin dashboard.  
+It provides an easy-to-use interface for product management, user handling, and order tracking.
 
+---
 
+## ✨ Features :
 
-## Features  :
+- Admin Login System  
+- Product Management (Add / Update / Delete)  
+- Product Image Upload  
+- User Management  
+- Order Management  
+- Admin Dashboard  
+- Thymeleaf Templates  
+- MySQL Database Integration  
 
-- **Customer Management**: Easily add, update, and delete customer information.
-- **Inventory Management**: Keep track of your inventory items, including stock levels and pricing.
-- **Order Management**: Manage customer orders such as order creation .
-- **User Authentication**: Secure login and authentication for admin and staff members.
-- **Role-Based Access Control**: Define roles and permissions for different user types.
-- **Thymeleaf Templates**: Utilizes Thymeleaf for dynamic HTML templates.
-- **Database Integration**: Integrated with MySQL for data storage.
+---
 
+## 🛠️ Technologies Used :
 
+- Spring Boot 3.5.0  
+- Spring MVC  
+- Spring Data JPA (Hibernate)  
+- Thymeleaf  
+- MySQL  
+- HTML & CSS  
+- Maven  
+- IDE/Tool : Spring Tool Suite 4 (STS / Eclipse)  
 
+---
 
-## Technologies Used :
+## ⚙️ Installation :
 
-- Spring Boot: Backend framework for building Java-based web applications.
-- Thymeleaf: Server-side Java template engine for dynamic HTML generation.
-- MySQL: Relational database management system for data storage.
-- IDE/Tool : Spring Tool Suite 4 (Eclipse)
+1. Clone the repository :
 
+2. Import the project into STS / Eclipse :
+- File → Import → Maven → Existing Maven Project  
+- Browse project folder → Finish  
 
+3. Configure database in `application.properties`
 
+4. Run the project :
+- Run `main()` method of `SambalpuriBazaarApplication.java`  
+- OR  
+- Right click → Run As → Spring Boot App  
 
-## Installation :
+5. Open in browser :
 
-1. Clone the repository : $ git clone https://github.com/SuhasKamate/Business_Management_Project.git <br>
+6. Database tables will be created automatically  
+- Add one Admin record manually for first login  
 
-2. Import the project inside STS/Eclipse : <br>
-     - Open STS/Eclipse > file > import > maven > existing project > browse > finish . <br>
-     
-3. Make sure you are in the Business_Management_Project directory. <br>
+---
 
-![packageExplorer](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/3ea1eb7f-8e49-4b76-96e4-798b6b8e8715)
+## 🗄️ Database :
 
+Configure MySQL in `application.properties` :
 
-4.Configure the database connection is application.properties (check the Database section for more information). <br>
+spring.datasource.name=your_db_name
+spring.datasource.url=jdbc:mysql://localhost:3306/your_db_name
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
-5.Run the project (by running main method is BusinessProjectApplication.java) OR right clink on the project > Run As > Spring Boot App. <br>
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
 
-6.Open http://localhost:2330/home in any browser. <br>
+server.port=8080
+---
 
-7.Now your tables will be created in the databse. <br>
-   - You have to add one admin data manually to login as admin, So add one admin data. <br>
-    
+## 🔄 WorkFlow :
 
+Admin Login
+↓
+Admin Dashboard
+↓
+Manage Products / Users / Orders
+↓
+MySQL Database
 
+---
 
-## Database :
+## 🖼️ Preview :
 
-MySQL can be used as the database for this project. 
-The database connection can be configured in the application.properties file, with the appropriate values for the following properties: <br>
+### Products
+![products](https://via.placeholder.com/700x350?text=Products+Page)
 
-spring.datasource.name=[Your Database Name] <br>
-spring.datasource.url=jdbc:mysql://localhost:3306/[Your Database Name] <br>
-spring.datasource.password=[Your password] <br>
-spring.datasource.username=[Your username] <br>
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver <br>
-spring.jpa.hibernate.ddl-auto=update <br>
-server.port=2330[Optional] <br>
+### Login Page
+![login](https://via.placeholder.com/700x350?text=Login+Page)
 
+### Admin Panel
+![admin](https://via.placeholder.com/700x350?text=Admin+Dashboard)
 
+### Exception Page
+![exception](https://via.placeholder.com/700x350?text=Exception+Page)
 
+---
 
-## WorkFlow :
+## 🎯 Purpose
 
-![workflow](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/aea72470-49c8-41a4-8974-48737638ae19)
+This project is built to demonstrate Spring Boot, MVC architecture, Thymeleaf, and CRUD operations in a real-world business application.
 
+---
 
+## 👨‍💻 Developer
 
+Doulat Biswal
+Dolly Prajapati
+Gargi Singh
 
-
-## Preview :
-
-
-#### Products 
-
-![products (2)](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/0496f63a-f30c-4108-91a7-966bd37b2b54)
-
-
-#### Location 
-
-![locateus](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/30e40d74-d2f0-48cb-91b3-ea515f12c498)
-
-
-
-#### Login Page
-
-![logins](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/9c1efb48-5b23-4a43-8c96-81d55a7b1180)
-
-
-
-
-#### AdminPanel
-
-![adminpanel](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/b89aa5ee-3f7f-4145-b063-048729e7fbe9)
-
-
-#### UserPanel 
-
-![userpanel](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/e0f81692-c049-4a2f-a78d-30d3906f4429)
-
-
-### Exception page
-
-![exceptionPage](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/4349a429-61ff-4ecd-a463-2900874e1ea5)
+MCA Student | KIET Group of Institutions | Java | Spring Boot | MySQL
